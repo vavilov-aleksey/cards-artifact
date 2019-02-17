@@ -1,0 +1,30 @@
+$bgc:              #121215;
+$bgc-15:           #151619;
+$color-text:       #a8a8a8;
+$bgc-grey:         #2b2c32;
+$color-accent:     #dd9629;
+$white:            #ffffff;
+$black:            #000000;
+
+$hero-red:         #6f2224;
+$hero-blue:        #21496e;
+$hero-green:       #3b7022;
+$hero-black:       #403c42;
+$hero-gold:        #7d6525;
+
+.scroll{
+  &::-webkit-scrollbar{
+    width: 5px;
+  }
+  &::-webkit-scrollbar-button{
+    display: none;
+  }
+  &::-webkit-scrollbar-track{}
+  &::-webkit-scrollbar-track-piece{}
+  &::-webkit-scrollbar-thumb{
+    background-color: $bgc-grey;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-corner{}
+  &::-webkit-resizer{}
+}

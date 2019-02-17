@@ -1,0 +1,12 @@
+<svg height='300px' width='300px' xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
+    <g stroke="none" stroke-width="1">
+        <g transform="translate(0.000000, 6.000000)" >
+            <polygon points="32.7402222 56.7022222 0 0 30.3677778 0 43.2977778 46.2633333"></polygon>
+            <polygon points="37.7224444 12.4555556 34.5195556 0 100 0 85.2906667 25.3855556"></polygon>
+            <polygon points="46.5005556 42.586 39.5017778 17.2004444 65.0058889 23.8434444"></polygon>
+            <polygon
+                    points="69.7508889 24.911 35.1126667 60.1423333 50.2965556 86.7141111 83.5112222 28.5883333"></polygon>
+        </g>
+    </g>
+</svg>

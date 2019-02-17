@@ -1,0 +1,79 @@
+.scroll::-webkit-scrollbar, .sort-cards::-webkit-scrollbar {
+  width: 5px; }
+.scroll::-webkit-scrollbar-button, .sort-cards::-webkit-scrollbar-button {
+  display: none; }
+.scroll::-webkit-scrollbar-thumb, .sort-cards::-webkit-scrollbar-thumb {
+  background-color: #2b2c32;
+  border-radius: 3px; }
+
+.sort-cards {
+  width: 30%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  user-select: none; }
+  .sort-cards .card {
+    height: 40px;
+    margin: 1px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: color .4s; }
+    .sort-cards .card img {
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      margin: 5px; }
+    .sort-cards .card:active .card-desc {
+      transform: scale(1.02, 1.02);
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.75);
+      z-index: 1; }
+    .sort-cards .card.selected {
+      cursor: not-allowed; }
+      .sort-cards .card.selected .card-desc {
+        transform: scale(0.98, 0.98);
+        box-shadow: inset 0 10px 10px 0 rgba(0, 0, 0, 0.75); }
+      .sort-cards .card.selected .overlay {
+        display: flex; }
+  .sort-cards .card-desc {
+    display: flex;
+    background-color: #2b2c32;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 3px; }
+    .sort-cards .card-desc span {
+      width: 100%; }
+    .sort-cards .card-desc small {
+      padding-right: 7px;
+      font-size: 18px; }
+    .sort-cards .card-desc div {
+      width: 30px;
+      height: 30px; }
+    .sort-cards .card-desc > div {
+      margin: 5px; }
+    .sort-cards .card-desc.red {
+      background-color: #6f2224; }
+    .sort-cards .card-desc.blue {
+      background-color: #21496e; }
+    .sort-cards .card-desc.green {
+      background-color: #3b7022; }
+    .sort-cards .card-desc.black {
+      background-color: #403c42; }
+    .sort-cards .card-desc.gold {
+      background-color: #7d6525; }
+    .sort-cards .card-desc:hover {
+      color: #ffffff; }
+  .sort-cards .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #dd9629; }
+
+/*# sourceMappingURL=sort-cards.css.map */

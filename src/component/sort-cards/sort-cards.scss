@@ -1,0 +1,98 @@
+@import '../../style/variables';
+
+.sort-cards{
+  width: 30%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  user-select: none;
+
+  @extend .scroll;
+
+  .card{
+    height: 40px;
+    margin: 1px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: color .4s;
+
+    img{
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+
+    &:active{
+      .card-desc{
+        transform: scale(1.02, 1.02);
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.75);
+        z-index: 1;
+      }
+    }
+
+    &.selected{
+      cursor: not-allowed;
+      .card-desc{
+        transform: scale(0.98, 0.98);
+        box-shadow: inset 0 10px 10px 0 rgba(0,0,0,0.75);
+      }
+      .overlay{
+        display: flex;
+      }
+    }
+
+  }
+
+  .card-desc{
+    display: flex;
+    background-color: $bgc-grey;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 3px;
+
+    span{
+      width: 100%;
+    }
+
+    small{
+      padding-right: 7px;
+      font-size: 18px;
+    }
+
+    & div{
+      width: 30px;
+      height: 30px;
+    }
+
+    & > div{
+      margin: 5px;
+    }
+
+    &.red{background-color: $hero-red;}
+    &.blue{background-color: $hero-blue;}
+    &.green{background-color: $hero-green;}
+    &.black{background-color: $hero-black;}
+    &.gold{background-color: $hero-gold;}
+
+    &:hover{
+      color: $white;
+    }
+  }
+
+
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: $color-accent
+  }
+}

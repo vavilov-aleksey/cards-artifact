@@ -1,0 +1,17 @@
+.scroll::-webkit-scrollbar {
+  width: 5px; }
+.scroll::-webkit-scrollbar-button {
+  display: none; }
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #2b2c32;
+  border-radius: 3px; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2b2c32;
+  height: 40px; }
+
+/*# sourceMappingURL=header.css.map */

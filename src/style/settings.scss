@@ -1,0 +1,44 @@
+@import "variables";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: $bgc;
+  color: $color-text;
+
+}
+
+input[type='text'],
+input[type='submit'],
+textarea,
+input[type='search'] {
+  border-radius: 5px;
+  margin: 0 5px;
+  width: calc(80% - 10px);
+  background-color: $bgc-grey;
+  outline: none;
+  padding: 7px;
+  border-top: 1px solid #3a3b40;
+  border-left: 1px solid #3a3b40;
+  border-bottom: 1px solid #151619;
+  border-right: 1px solid #151619;
+  color: $color-text;
+  font-size: 14px;
+
+  &::placeholder{
+    color: $color-text;
+  }
+}
+
+#root{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container{
+  flex: 1 0 auto;
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+}

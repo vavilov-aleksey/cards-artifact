@@ -1,0 +1,78 @@
+@import '../../style/variables';
+
+.sort-preview {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  max-width: 350px;
+  align-content: space-between;
+
+  .card {
+    position: relative;
+    display: flex;
+  }
+
+  .primary {
+    width: 80%;
+    margin-left: 20%;
+    z-index: 10;
+
+    img {
+      max-width: 100%;
+      z-index: 11;
+    }
+  }
+
+  .secondary {
+    width: 65%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: 0;
+    opacity: 0.7;
+    transition: opacity 200ms ease;
+    transform: perspective(550px) rotateY(25deg);
+    cursor: pointer;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .info {
+    margin-top: 50px;
+
+    .block {
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      font-weight: 700;
+      background-color: $bgc;
+      align-items: center;
+
+      span {
+        flex: 1 0 auto;
+        text-align: right;
+      }
+
+      & > div{
+        height: 15px;
+        width: 15px;
+      }
+
+      svg{
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+      }
+    }
+
+    .desc {
+      padding: 5px;
+      background-color: $bgc-15;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../style/variables";
+
+
+.popup-error{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: $white;
+  font-size: 20px;
+  background-color: $color-accent;
+  transition: opacity .4s;
+  box-shadow: -5px 10px 10px 0 rgba(0,0,0,0.75);
+  z-index: 999;
+}

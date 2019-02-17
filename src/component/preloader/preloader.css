@@ -1,0 +1,41 @@
+.scroll::-webkit-scrollbar {
+  width: 5px; }
+.scroll::-webkit-scrollbar-button {
+  display: none; }
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #2b2c32;
+  border-radius: 3px; }
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #121215;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .preloader svg {
+    width: 100px;
+    height: 100px; }
+  .preloader svg polygon:nth-child(1) {
+    animation: cell 1s ease-in-out infinite;
+    fill: #6f2224; }
+  .preloader svg polygon:nth-child(2) {
+    animation: cell 1s .2s ease-in-out infinite;
+    fill: #21496e; }
+  .preloader svg polygon:nth-child(3) {
+    fill: #403c42; }
+  .preloader svg polygon:nth-child(4) {
+    animation: cell 1s .4s ease-in-out infinite;
+    fill: #3b7022; }
+@keyframes cell {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*# sourceMappingURL=preloader.css.map */

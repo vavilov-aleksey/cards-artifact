@@ -1,0 +1,256 @@
+@import '../../style/variables';
+
+.deck {
+  width: 465px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+//Wrapper heroes
+.deck__heroes {
+  display: flex;
+}
+
+//Hero
+.deck__hero {
+  margin: 0 5px;
+  width: 100%;
+  height: 120px;
+  background-color: $bgc-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+
+  &.red {
+    img {
+      box-shadow: 0 0 20px 8px $hero-red;
+    }
+  }
+
+  &.green {
+    img {
+      box-shadow: 0 0 20px 8px $hero-green;
+    }
+  }
+
+  &.blue {
+    img {
+      box-shadow: 0 0 20px 8px $hero-blue;
+    }
+  }
+
+  &.black {
+    img {
+      box-shadow: 0 0 20px 8px $hero-black;
+    }
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+}
+
+//Card
+.deck__cards {
+  margin: 15px 5px;
+  flex: 1 0 auto;
+  max-height: 470px;
+  overflow-y: auto;
+  @extend .scroll;
+}
+
+.deck__card {
+  display: flex;
+  margin-bottom: 5px;
+
+
+  img {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+
+  &-block {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 18px;
+    width: 100%;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+
+    div {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    small {
+      margin-right: 5px;
+      font-size: 18px;
+    }
+
+    img {
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      margin: 0 5px;
+    }
+
+    &.red {
+      background-color: $hero-red;
+    }
+
+    &.green {
+      background-color: $hero-green;
+    }
+
+    &.blue {
+      background-color: $hero-blue;
+    }
+
+    &.black {
+      background-color: $hero-black;
+    }
+
+    &.gold {
+      background-color: $hero-gold;
+    }
+  }
+
+  &-title {
+    flex: 1 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+//Statistics
+.deck__statistics {
+  display: flex;
+
+  .title {
+    text-align: center;
+  }
+
+  &-color {
+    width: 50%;
+
+    .rows{
+      display: flex;
+
+      &.row:last-child{
+        margin-right: 0;
+      }
+    }
+
+    .row{
+      margin-right: 5px;
+
+      span{
+        margin: 5px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .bar{
+      width: 25px;
+      height: 85px;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+
+      span{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 1px;
+      }
+    }
+
+    .col {
+      margin-top: 5px;
+      display: flex;
+      height: 26px;
+      background-color: $bgc-grey;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .col-cell {
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 26px;
+        height: 26px;
+        display: block;
+      }
+    }
+
+    .cell-red {background-color: $hero-red;}
+    .cell-blue {background-color: $hero-blue;}
+    .cell-green {background-color: $hero-green;}
+    .cell-black {background-color: $hero-black;}
+  }
+
+  &-item {
+    width: 50%;
+
+    .rows {
+      display: flex;
+
+      .row:first-child {
+        width: 50px;
+      }
+    }
+
+    .icon {
+      display: flex;
+      width: 40px;
+      margin-top: 5px;
+
+    }
+
+    .icon div {
+      width: 26px;
+      height: 26px;
+      margin-right: 5px;
+    }
+
+    .row {
+      width: 40px;
+      margin-left: 5px;
+
+      span {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+      }
+    }
+
+    .col {
+      height: 26px;
+      background-color: $bgc-grey;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

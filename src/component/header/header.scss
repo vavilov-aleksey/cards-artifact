@@ -1,0 +1,10 @@
+@import "../../style/variables";
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bgc-grey;
+  height: 40px;
+}

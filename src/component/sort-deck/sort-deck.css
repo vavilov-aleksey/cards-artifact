@@ -1,0 +1,173 @@
+.scroll::-webkit-scrollbar, .deck__cards::-webkit-scrollbar {
+  width: 5px; }
+.scroll::-webkit-scrollbar-button, .deck__cards::-webkit-scrollbar-button {
+  display: none; }
+.scroll::-webkit-scrollbar-thumb, .deck__cards::-webkit-scrollbar-thumb {
+  background-color: #2b2c32;
+  border-radius: 3px; }
+
+.deck {
+  width: 465px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.deck__heroes {
+  display: flex; }
+
+.deck__hero {
+  margin: 0 5px;
+  width: 100%;
+  height: 120px;
+  background-color: #2b2c32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; }
+  .deck__hero.red img {
+    box-shadow: 0 0 20px 8px #6f2224; }
+  .deck__hero.green img {
+    box-shadow: 0 0 20px 8px #3b7022; }
+  .deck__hero.blue img {
+    box-shadow: 0 0 20px 8px #21496e; }
+  .deck__hero.black img {
+    box-shadow: 0 0 20px 8px #403c42; }
+  .deck__hero img {
+    width: 30px;
+    height: 30px;
+    padding: 5px; }
+
+.deck__cards {
+  margin: 15px 5px;
+  flex: 1 0 auto;
+  max-height: 470px;
+  overflow-y: auto; }
+
+.deck__card {
+  display: flex;
+  margin-bottom: 5px; }
+  .deck__card img {
+    width: 38px;
+    min-width: 38px;
+    height: 38px; }
+  .deck__card-block {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 18px;
+    width: 100%;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
+    .deck__card-block div {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px; }
+    .deck__card-block small {
+      margin-right: 5px;
+      font-size: 18px; }
+    .deck__card-block img {
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      margin: 0 5px; }
+    .deck__card-block.red {
+      background-color: #6f2224; }
+    .deck__card-block.green {
+      background-color: #3b7022; }
+    .deck__card-block.blue {
+      background-color: #21496e; }
+    .deck__card-block.black {
+      background-color: #403c42; }
+    .deck__card-block.gold {
+      background-color: #7d6525; }
+  .deck__card-title {
+    flex: 1 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.deck__statistics {
+  display: flex; }
+  .deck__statistics .title {
+    text-align: center; }
+  .deck__statistics-color {
+    width: 50%; }
+    .deck__statistics-color .rows {
+      display: flex; }
+      .deck__statistics-color .rows.row:last-child {
+        margin-right: 0; }
+    .deck__statistics-color .row {
+      margin-right: 5px; }
+      .deck__statistics-color .row span {
+        margin: 5px 0;
+        display: flex;
+        justify-content: center; }
+    .deck__statistics-color .bar {
+      width: 25px;
+      height: 85px;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse; }
+      .deck__statistics-color .bar span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 1px; }
+    .deck__statistics-color .col {
+      margin-top: 5px;
+      display: flex;
+      height: 26px;
+      background-color: #2b2c32; }
+      .deck__statistics-color .col div {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .deck__statistics-color .col-cell {
+      display: flex;
+      align-items: center; }
+      .deck__statistics-color .col-cell div {
+        width: 26px;
+        height: 26px;
+        display: block; }
+    .deck__statistics-color .cell-red {
+      background-color: #6f2224; }
+    .deck__statistics-color .cell-blue {
+      background-color: #21496e; }
+    .deck__statistics-color .cell-green {
+      background-color: #3b7022; }
+    .deck__statistics-color .cell-black {
+      background-color: #403c42; }
+  .deck__statistics-item {
+    width: 50%; }
+    .deck__statistics-item .rows {
+      display: flex; }
+      .deck__statistics-item .rows .row:first-child {
+        width: 50px; }
+    .deck__statistics-item .icon {
+      display: flex;
+      width: 40px;
+      margin-top: 5px; }
+    .deck__statistics-item .icon div {
+      width: 26px;
+      height: 26px;
+      margin-right: 5px; }
+    .deck__statistics-item .row {
+      width: 40px;
+      margin-left: 5px; }
+      .deck__statistics-item .row span {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 13px; }
+    .deck__statistics-item .col {
+      height: 26px;
+      background-color: #2b2c32;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+
+/*# sourceMappingURL=sort-deck.css.map */

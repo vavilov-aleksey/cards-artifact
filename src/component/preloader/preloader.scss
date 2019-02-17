@@ -1,0 +1,49 @@
+@import "../../style/variables";
+
+.preloader{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: $bgc;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  svg{
+    width: 100px;
+    height: 100px;
+  }
+  svg polygon{
+
+    &:nth-child(1){
+      animation: cell 1s ease-in-out infinite;
+      fill: $hero-red
+    }
+    &:nth-child(2){
+      animation: cell 1s .2s ease-in-out infinite;
+      fill: $hero-blue
+    }
+    &:nth-child(3){
+      //animation: cell 1s ease-in-out infinite;
+      fill: $hero-black
+    }
+    &:nth-child(4){
+      animation: cell 1s .4s ease-in-out infinite;
+      fill: $hero-green
+    }
+  }
+
+  @keyframes cell {
+    0%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
