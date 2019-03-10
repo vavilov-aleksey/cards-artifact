@@ -3,6 +3,7 @@
 .sort-footer {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 6px;
 
   input[type='text'] {
     &:first-child {
@@ -21,10 +22,17 @@
       background-color: $color-accent;
       color: $white;
     }
+
+    &[disabled]{
+      &:hover{
+        cursor: not-allowed;
+        background-color: $bgc-grey;
+      }
+    }
   }
 
   textarea {
-    width: 100%;
+    width: 100%!important;
     margin: 5px;
     height: 60px;
   }

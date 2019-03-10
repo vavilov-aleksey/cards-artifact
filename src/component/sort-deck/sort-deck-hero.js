@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './sort-deck.css'
 
 export default class Hero extends Component {
@@ -10,7 +10,7 @@ export default class Hero extends Component {
         (data.data.is_red ? 'red' :
           data.data.is_black ? 'black' :
             data.data.is_blue ? 'blue' :
-            data.data.is_green ? 'green' : '') + ' deck__hero'}>
+              data.data.is_green ? 'green' : '') + ' deck__hero'}>
         {data.data.ingame_image ?
           <img src={data.data.ingame_image.default} alt=''/>
           : ''

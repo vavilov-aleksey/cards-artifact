@@ -3,7 +3,9 @@ import './sort-preview.css'
 import {connect} from "react-redux";
 import iconW from '../../images/warning-icon.svg';
 import iconS from '../../images/check-icon.svg';
-import ReactSVG from 'react-svg'
+import ReactSVG from 'react-svg';
+import {fullDeck} from "../../redux/Action/fullDeck";
+
 
 class SortPreviewInfo extends Component {
 
@@ -51,8 +53,12 @@ class SortPreviewInfo extends Component {
       },
       {valid: count >= 40, title: 'Основные карты', titleInfo: `${count}/40${count >= 40 ? '+' : ''}`, info: 'В колоде должно быть минимум 40 карт'},
       {valid: item.length >= 9, title: 'Предметы', titleInfo: `${item.length}/9${item.length >= 9 ? '+' : ''}`, info: 'В колоде должно быть минмимум 9 предметов'},
-      {title: 'Стоимость колоды', cost: '0.00'}
     ];
+
+    if(count >= 40 && item.length >= 9 && hero.length === 5){
+      this.props.fullDeck(true);
+    }
+
     return (
       <div className="info">
         {
@@ -81,4 +87,4 @@ class SortPreviewInfo extends Component {
 
 export default connect(state => ({
   selectedCards: state.selectedCards
-}))(SortPreviewInfo)
+}), {fullDeck})(SortPreviewInfo)

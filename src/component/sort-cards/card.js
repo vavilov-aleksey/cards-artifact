@@ -32,7 +32,6 @@ class Card extends Component {
 
   checkSelected = () => {
     this.props.activeCard(this.props.cell.card_id);
-    // this.setState({cardActive: true});
   };
 
   doubleCheckSelected = () => {

@@ -10,7 +10,8 @@ body, html {
   margin: 0;
   padding: 0;
   background-color: #121215;
-  color: #a8a8a8; }
+  color: #a8a8a8;
+  min-width: 1000px; }
 
 input[type='text'],
 input[type='submit'],

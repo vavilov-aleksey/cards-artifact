@@ -119,8 +119,8 @@
     .deck__statistics-color .col {
       margin-top: 5px;
       display: flex;
-      height: 26px;
-      background-color: #2b2c32; }
+      background-color: #2b2c32;
+      height: 120px; }
       .deck__statistics-color .col div {
         display: flex;
         align-items: center;

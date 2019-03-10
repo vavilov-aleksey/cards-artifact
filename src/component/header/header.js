@@ -9,11 +9,6 @@ export default class Header extends Component {
             <header>
                 Колоды ARTIFACT
             </header>
-            <div className="menu">
-                <ul>
-                    <li>Создать</li>
-                </ul>
-            </div>
         </React.Fragment>
     );
   }

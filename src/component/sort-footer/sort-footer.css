@@ -8,7 +8,8 @@
 
 .sort-footer {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 6px; }
   .sort-footer input[type='text']:first-child {
     width: 100%; }
   .sort-footer input[type='submit'] {
@@ -20,8 +21,11 @@
     .sort-footer input[type='submit']:hover {
       background-color: #dd9629;
       color: #ffffff; }
+    .sort-footer input[type='submit'][disabled]:hover {
+      cursor: not-allowed;
+      background-color: #2b2c32; }
   .sort-footer textarea {
-    width: 100%;
+    width: 100% !important;
     margin: 5px;
     height: 60px; }
 

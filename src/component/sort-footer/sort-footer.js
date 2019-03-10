@@ -1,15 +1,47 @@
 import React, {Component} from 'react';
 import './sort-footer.css'
+import {connect} from "react-redux";
+import {selectedCardsClear} from "../../redux/Action/selectedCards";
 
-export default class SortFooter extends Component {
-    render() {
-        return (
-            <div className="sort-footer">
-                <input type="text" placeholder='Код колоды'/>
-                <textarea placeholder='Описание колоды'/>
-                <input type="text" placeholder='Название колоды'/>
-                <input type="submit" value='Сохранить'/>
-            </div>
-        );
-    }
+class SortFooter extends Component {
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const desc = this.desc.value;
+    const name = this.name.value;
+
+    const dataAlert = {
+      'nameDeck': name,
+      'descriptionDeck' : desc,
+      'selectedCards': this.props.selectedCards
+    };
+
+    console.log(dataAlert);
+
+    this.desc.value = '';
+    this.name.value = '';
+    this.props.selectedCardsClear();
+  };
+
+  render() {
+    const fullDeck = this.props.fullDeck;
+
+    return (
+      <form className="sort-footer" onSubmit={this.handleSubmit}>
+        <textarea placeholder='Описание колоды'
+                  ref={(input) => this.desc = input}
+        />
+        <input type="text"
+               placeholder='Название колоды'
+               required ref={(input) => this.name = input}
+        />
+        <input type="submit" value='Сохранить' disabled={!fullDeck}/>
+      </form>
+    );
+  }
 }
+
+export default connect(state => ({
+  fullDeck: state.fullDeck,
+  selectedCards: state.selectedCards
+}), {selectedCardsClear})(SortFooter);

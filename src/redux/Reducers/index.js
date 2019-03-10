@@ -6,6 +6,7 @@ import activeCard from "./activeCard";
 import selectedCards from "./selectedCards";
 import search from "./search";
 import popupError from "./popupError";
+import fullDeck from "./fullDeck";
 
 export default combineReducers({
   data,
@@ -14,5 +15,6 @@ export default combineReducers({
   activeCard,
   selectedCards,
   search,
-  popupError
+  popupError,
+  fullDeck
 })
