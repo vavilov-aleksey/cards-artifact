@@ -10,12 +10,12 @@ export default function configureStore(initialState) {
             }) : compose;
 
     // Local
-    const enhancer = composeEnhancers(
-        applyMiddleware(thunk)
-    );
+    // const enhancer = composeEnhancers(
+    //     applyMiddleware(thunk)
+    // );
 
     //Prod
-    // const enhancer = applyMiddleware(thunk);
+    const enhancer = applyMiddleware(thunk);
 
     return createStore(
         rootReducer,
