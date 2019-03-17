@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from "react-redux";
 import ReactSVG from 'react-svg';
 import creep from "../../images/creep.svg";
@@ -43,13 +43,13 @@ class Card extends Component {
 
     let icon;
     icon = returnRefer(data.data, arrCards).type === 'Creep' ? creep :
-            returnRefer(data.data, arrCards).type === 'Spell' ? spell :
-              returnRefer(data.data, arrCards).type === 'Improvement' ? improvement :
-                returnRefer(data.data, arrCards).type === 'Hero' ? hero :
-                  (data.data.card_type === 'Item' && data.data.sub_type === 'Accessory') ? accessory :
-                    (data.data.card_type === 'Item' && data.data.sub_type === 'Armor') ? armor :
-                      (data.data.card_type === 'Item' && data.data.sub_type === 'Consumable') ? consumable :
-                        (data.data.card_type === 'Item' && data.data.sub_type === 'Weapon') ? weapon : consumable;
+      returnRefer(data.data, arrCards).type === 'Spell' ? spell :
+        returnRefer(data.data, arrCards).type === 'Improvement' ? improvement :
+          returnRefer(data.data, arrCards).type === 'Hero' ? hero :
+            (data.data.card_type === 'Item' && data.data.sub_type === 'Accessory') ? accessory :
+              (data.data.card_type === 'Item' && data.data.sub_type === 'Armor') ? armor :
+                (data.data.card_type === 'Item' && data.data.sub_type === 'Consumable') ? consumable :
+                  (data.data.card_type === 'Item' && data.data.sub_type === 'Weapon') ? weapon : consumable;
 
 
     return (
@@ -72,6 +72,7 @@ class Card extends Component {
     );
   }
 }
+
 export default connect(state => ({
   init: state.data.card_list
 }))(Card)

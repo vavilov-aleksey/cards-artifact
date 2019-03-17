@@ -17,10 +17,10 @@ class SortCards extends Component {
     if (filter.type === 'type') arrInit = arrInit.filter(item => item.card_type === filter.activeFilter);
     if (filter.type === 'rarity' && filter.activeFilter !== 'Base') arrInit = arrInit.filter(item => item.rarity === filter.activeFilter);
     if (filter.type === 'color') arrInit = arrInit.filter(item => (
-      filter.activeFilter === 'Red' ? item.is_red === true :
-        filter.activeFilter === 'Blue' ? item.is_blue === true :
-          filter.activeFilter === 'Green' ? item.is_green === true :
-            item.is_black === true
+      filter.activeFilter === 'Red' ? item.is_red :
+        filter.activeFilter === 'Blue' ? item.is_blue :
+          filter.activeFilter === 'Green' ? item.is_green :
+            item.is_black
 
     ));
     if(search) arrInit = arrInit.filter(item => item.card_name.russian.toLowerCase().includes(search.toLowerCase()));

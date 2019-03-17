@@ -7,16 +7,16 @@ class StatisticsColor extends Component {
 
     switch (type) {
       case 'is_red':
-        sumColor = arr.filter(card => card.is_red === true).length;
+        sumColor = arr.filter(card => card.is_red).length;
         break;
       case 'is_blue':
-        sumColor = arr.filter(card => card.is_blue === true).length;
+        sumColor = arr.filter(card => card.is_blue).length;
         break;
       case 'is_green':
-        sumColor = arr.filter(card => card.is_green === true).length;
+        sumColor = arr.filter(card => card.is_green).length;
         break;
       case 'is_black':
-        sumColor = arr.filter(card => card.is_black === true).length;
+        sumColor = arr.filter(card => card.is_black).length;
         break;
       default:
         break;
